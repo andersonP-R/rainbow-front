@@ -36,7 +36,7 @@ export const Slideshow = () => {
       >
         {slideImgs.map((img) => (
           <SwiperSlide key={img.id}>
-            <span className="absolute bg-black w-screen h-screen opacity-40  z-10"></span>
+            <span className="absolute bg-black w-screen h-screen opacity-40 z-10"></span>
             <img src={img.img} alt={img.alt} className="object-fill" />
             <div className="absolute flex flex-col gap-5 bottom-52 left-20 z-20">
               <span className={`${titleFont.className} text-6xl text-white `}>

@@ -90,7 +90,7 @@ export const RegisterForm = () => {
         {...register("password", { required: true, minLength: 4 })}
       />
 
-      <button className="btn-primary">Ingresar</button>
+      <button className="btn-primary">Registrarse</button>
 
       <div className="flex items-center my-5">
         <div className="flex-1 border-t border-gray-500"></div>
@@ -99,7 +99,7 @@ export const RegisterForm = () => {
       </div>
 
       <Link href="/auth/login" className="btn-secondary text-center">
-        Ingresar
+        Iniciar sesión
       </Link>
     </form>
   );

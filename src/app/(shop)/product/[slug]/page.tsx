@@ -7,6 +7,7 @@ import { titleFont } from "@/config/fonts";
 import { AddToCart } from "./ui/AddToCart";
 import { ProductMobileSlideshow } from "@/components/products/ProductMobileSlideShow";
 import { ProductDesktopSlideshow } from "@/components/products/ProductDesktopSlideShow";
+import axios from "axios";
 
 interface Props {
   params: {
@@ -16,13 +17,10 @@ interface Props {
 
 export default async function ProductBySlugPage({ params }: Props) {
   const { slug } = params;
-  const res = await fetch(
-    `${process.env.NEXT_PUBLIC_API_URL}/products/${slug}`,
-    {
-      cache: "no-cache",
-    }
+  const res = await axios.get(
+    `${process.env.NEXT_PUBLIC_API_URL}/products/${slug}`
   );
-  const product = await res.json();
+  const product = await res.data;
 
   if (!product) {
     notFound();
