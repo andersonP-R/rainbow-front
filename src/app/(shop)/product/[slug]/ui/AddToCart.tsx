@@ -6,9 +6,10 @@ import { SizeSelector } from "@/components/products/SizeSelector";
 import { QuantitySelector } from "@/components/products/QuantitySelector";
 import type { CartProduct, Product, Size } from "@/interfaces/Product";
 import { useCartStore } from "@/store/cart/cart-store";
+import { SeedProduct } from "@/seed/seed-data";
 
 interface Props {
-  product: Product;
+  product: SeedProduct;
 }
 
 export const AddToCart = ({ product }: Props) => {

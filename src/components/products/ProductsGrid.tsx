@@ -1,7 +1,7 @@
 "use client";
 
 import { IoSearchOutline } from "react-icons/io5";
-import { Product } from "../../interfaces/Product";
+// import { Product } from "../../interfaces/Product";
 import { ProductGridItem } from "./ProductGridItem";
 import { useForm } from "react-hook-form";
 import axios from "axios";
@@ -9,9 +9,10 @@ import { useEffect, useState } from "react";
 import { useFormState } from "react-dom";
 import { searchHandler } from "@/actions";
 import { NoProductsTemplate } from "./NoProductsTemplate";
+import { SeedProduct } from "@/seed/seed-data";
 
 interface Props {
-  products: Product[];
+  products: SeedProduct[];
 }
 
 interface FormFields {
@@ -91,7 +92,7 @@ export const ProductGrid = ({ products }: Props) => {
   return (
     <div>
       <div className="flex flex-col gap-2 m-4 items-center md:flex-row">
-        <form
+        {/* <form
           action={dispatch}
           className="flex relative border-2 border-gray-400 rounded"
         >
@@ -154,7 +155,7 @@ export const ProductGrid = ({ products }: Props) => {
               filtrar
             </button>
           </form>
-        </div>
+        </div> */}
       </div>
 
       {/* PRODUCT GRID */}

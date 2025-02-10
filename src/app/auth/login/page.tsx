@@ -1,7 +1,7 @@
 import { titleFont } from "@/config/fonts";
-import { cookies } from "next/headers";
+// import { cookies } from "next/headers";
 import { LoginForm } from "../ui/LoginForm";
-import { redirect } from "next/navigation";
+// import { redirect } from "next/navigation";
 
 export default async function LoginPage() {
   return (

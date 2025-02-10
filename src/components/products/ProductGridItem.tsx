@@ -4,9 +4,10 @@ import { useState } from "react";
 import { Product } from "@/interfaces/Product";
 import Image from "next/image";
 import Link from "next/link";
+import { SeedProduct } from "@/seed/seed-data";
 
 interface Props {
-  product: Product;
+  product: SeedProduct;
 }
 
 export const ProductGridItem = ({ product }: Props) => {

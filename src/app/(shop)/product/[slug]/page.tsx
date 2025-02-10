@@ -7,7 +7,8 @@ import { titleFont } from "@/config/fonts";
 import { AddToCart } from "./ui/AddToCart";
 import { ProductMobileSlideshow } from "@/components/products/ProductMobileSlideShow";
 import { ProductDesktopSlideshow } from "@/components/products/ProductDesktopSlideShow";
-import axios from "axios";
+// import axios from "axios";
+import { initialData } from "@/seed/seed-data";
 
 interface Props {
   params: {
@@ -17,10 +18,10 @@ interface Props {
 
 export default async function ProductBySlugPage({ params }: Props) {
   const { slug } = params;
-  const res = await axios.get(
-    `${process.env.NEXT_PUBLIC_API_URL}/products/${slug}`
-  );
-  const product = await res.data;
+  // const res = await axios.get(
+  //   `${process.env.NEXT_PUBLIC_API_URL}/products/${slug}`
+  // );
+  const product = initialData.products.filter((e) => e.slug === slug);
 
   if (!product) {
     notFound();
@@ -32,15 +33,15 @@ export default async function ProductBySlugPage({ params }: Props) {
       <div className="col-span-1 md:col-span-2 ">
         {/* Mobile Slideshow */}
         <ProductMobileSlideshow
-          title={product.title}
-          images={product.images}
+          title={product[0].title}
+          images={product[0].images}
           className="block md:hidden"
         />
 
         {/* Desktop Slideshow */}
         <ProductDesktopSlideshow
-          title={product.title}
-          images={product.images}
+          title={product[0].title}
+          images={product[0].images}
           className="hidden md:block"
         />
       </div>
@@ -48,17 +49,17 @@ export default async function ProductBySlugPage({ params }: Props) {
       {/* Detalles */}
       <div className="col-span-1 px-5">
         <h1 className={` ${titleFont.className} antialiased font-bold text-xl`}>
-          {product.title}
+          {product[0].title}
         </h1>
 
-        <span className="">Stock: {product.inStock}</span>
-        <p className="text-lg mb-5">${product.price}</p>
+        <span className="">Stock: {product[0].inStock}</span>
+        <p className="text-lg mb-5">${product[0].price}</p>
 
-        <AddToCart product={product} />
+        <AddToCart product={product[0]} />
 
         {/* Descripción */}
         <h3 className="font-bold text-sm">Descripción</h3>
-        <p className="font-light">{product.description}</p>
+        <p className="font-light">{product[0].description}</p>
       </div>
     </div>
   );

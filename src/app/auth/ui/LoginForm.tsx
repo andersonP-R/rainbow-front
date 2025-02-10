@@ -64,7 +64,7 @@ export const LoginForm = () => {
   };
 
   return (
-    <form className="flex flex-col" onSubmit={handleSubmit(onSubmit)}>
+    <form className="flex flex-col">
       {error && <span className="text-red-500"> {error} </span>}
       <label htmlFor="email">Correo electrónico</label>
       <input

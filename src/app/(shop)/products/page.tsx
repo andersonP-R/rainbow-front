@@ -1,9 +1,12 @@
-import { ProductGrid, Title } from "@/components";
-import axios from "axios";
+import { ProductGrid } from "@/components";
+import { initialData } from "@/seed/seed-data";
+// import axios from "axios";
 
-export default async function ProductsPage() {
-  const result = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/products`);
-  const products = await result.data;
+export default function ProductsPage() {
+  const result = initialData.products;
+
+  const products = result;
+
   return (
     <section className="p-2">
       <ProductGrid products={products} />
