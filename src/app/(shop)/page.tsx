@@ -5,14 +5,14 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="flex flex-col gap-20 ">
+    <div className="flex flex-col gap-14 md:gap-20">
       {/* ---------- HERO ------------ */}
-      <section className="h-screen mb-20">
+      <section className="h-[400px] md:h-screen md:mb-20">
         <div className="flex h-[100%]">
-          <div className="w-[65%] relative">
+          <div className="w-[100%] relative md:w-[65%] rounded-lg">
             <Slideshow />
           </div>
-          <div className="relative">
+          <div className="relative hidden md:flex w-[35%]">
             <img
               src="/images/left3.jpg"
               alt="men"
@@ -29,22 +29,28 @@ export default function Home() {
       </section>
 
       {/* ---------- BIENVENIDO A RAINBOW CLOTHES SECTION ----------- */}
-      <section className="h-auto mb-20">
+      <section className="h-auto md:mb-20">
         <div className="flex flex-col items-center gap-3">
-          <h1 className="text-black text-4xl font-semibold">
+          <h1 className="text-black text-xl md:text-4xl font-semibold">
             BIENVENIDO A{" "}
             <strong className="text-orange-500">RAINBOW CLOTHES</strong>
           </h1>
           <h2 className="font-light text-xl text-gray-500 mb-6">
             Calidad y estilo en un solo lugar
           </h2>
-          <div className="flex w-[100%] justify-center cursor-pointer">
+          <div className="flex md:justify-center snap-x snap-mandatory w-full overflow-scroll md:overflow-visible cursor-pointer">
             {items.map((el) => (
               <div
                 key={el.id}
-                className="flex flex-col items-center gap-2 px-5"
+                className="flex flex-col items-center gap-2 pb-4 px-5"
               >
-                <img src={el.img} alt={el.descrip} className="rounded-[100%]" />
+                <div className="w-[100px] h-[100px]">
+                  <img
+                    src={el.img}
+                    alt={el.descrip}
+                    className="object-cover rounded-full"
+                  />
+                </div>
                 <p className="text-black font-medium">{el.descrip}</p>
               </div>
             ))}
@@ -54,7 +60,7 @@ export default function Home() {
 
       {/* ------------- APROVECHA LOS GRANDES DECUENTOS QUE TENEMOS EN MODA MASCULINA SECTION --------------- */}
       <section className="h-auto mb-10 p-10">
-        <div className="flex ">
+        <div className="flex flex-col-reverse md:flex-row ">
           <div className="flex flex-col gap-5 w-[50%]">
             <h1 className="text-black text-4xl font-semibold leading-snug">
               APROVECHA LOS GRANDES DECUENTOS QUE TENEMOS EN{" "}
@@ -73,7 +79,7 @@ export default function Home() {
             </Link>
           </div>
 
-          <div className="w-[50%]">
+          <div className="w-full mb-9 md:mb-0 md:w-[50%]">
             <img src="/images/1.jpg" alt="men-suit" className="rounded-2xl" />
           </div>
         </div>

@@ -17,7 +17,7 @@ export const items = [
   {
     id: 4,
     img: "/images/grid4.jpg",
-    descrip: "Ropa Elegante",
+    descrip: "Ropa",
   },
   {
     id: 5,
