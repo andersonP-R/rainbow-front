@@ -34,7 +34,7 @@ export const Footer = () => {
 
         {/* ----------- RIGHT CONTENT -------------- */}
         <div className="flex flex-col w-[95%] md:w-[60%]">
-          <h1 className="text-white mb-8 text-4xl leading-relaxed">
+          <h1 className="text-white mb-8 text-3xl md:text-4xl leading-relaxed">
             Estamos felices de tenerte en nuestra tienda, tanto virtual como
             fisica, no dudes en contactarnos o visitarnos.
           </h1>
@@ -64,7 +64,7 @@ export const Footer = () => {
       </div>
       <div className="bg-gray-700 h-[1px] mx-8" />
       <div className="flex justify-center p-8">
-        <span className="text-white font-extralight justify-self-center mb-10">
+        <span className="text-white font-extralight text-center justify-self-center mb-10">
           &copy; Rainbow clothes - Todos los derechos reservados.
         </span>
       </div>

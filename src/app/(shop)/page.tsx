@@ -59,10 +59,10 @@ export default function Home() {
       </section>
 
       {/* ------------- APROVECHA LOS GRANDES DECUENTOS QUE TENEMOS EN MODA MASCULINA SECTION --------------- */}
-      <section className="h-auto mb-10 p-10">
-        <div className="flex flex-col-reverse md:flex-row ">
-          <div className="flex flex-col gap-5 w-[50%]">
-            <h1 className="text-black text-4xl font-semibold leading-snug">
+      <section className="h-auto mb-10 px-5 md:p-10">
+        <div className="flex flex-col md:flex-row">
+          <div className="flex flex-col mb-8 md:mb-0 gap-5 md:w-[50%]">
+            <h1 className="text-black text-xl md:text-4xl font-semibold leading-snug">
               APROVECHA LOS GRANDES DECUENTOS QUE TENEMOS EN{" "}
               <strong className="text-orange-500">MODA MASCULINA</strong>
             </h1>
@@ -79,17 +79,17 @@ export default function Home() {
             </Link>
           </div>
 
-          <div className="w-full mb-9 md:mb-0 md:w-[50%]">
+          <div className="w-full md:mb-0 md:w-[50%]">
             <img src="/images/1.jpg" alt="men-suit" className="rounded-2xl" />
           </div>
         </div>
       </section>
 
       {/* ------------- NO DEJES ESCAPAR NUESTROS DESCUENTOS EN... SECTION  --------------- */}
-      <section className="h-auto mb-10 p-10">
-        <div className="flex flex-row-reverse ">
-          <div className="flex flex-col gap-5 w-[50%] text-right">
-            <h1 className="text-black text-4xl font-semibold leading-snug">
+      <section className="h-auto mb-10 px-5 md:p-10">
+        <div className="flex flex-col md:flex-row-reverse">
+          <div className="flex flex-col mb-8 md:mb-0 gap-5 md:w-[50%] md:text-right">
+            <h1 className="text-black text-xl md:text-4xl font-semibold leading-snug">
               NO DEJES ESCAPAR NUESTROS DESCUENTOS EN {""}
               <strong className="text-orange-500">ACCESORIOS FEMENINOS</strong>
             </h1>
@@ -106,7 +106,7 @@ export default function Home() {
             </Link>
           </div>
 
-          <div className="w-[50%] mr-10">
+          <div className="w-full md:mb-0 md:w-[50%]">
             <img src="/images/2.jpg" alt="men-suit" className="rounded-2xl" />
           </div>
         </div>
@@ -117,15 +117,15 @@ export default function Home() {
         <img
           src="/images/bg3.jpg"
           alt="shoes"
-          className="absolute -z-10 w-screen h-[500px]"
+          className="absolute -z-10 w-screen h-[500px] object-cover"
         />
 
         <div className="flex flex-col items-center gap-6 w-[500px] text-center">
-          <h1 className="text-white text-4xl font-semibold leading-snug">
+          <h1 className="text-white text-xl md:text-4xl font-semibold leading-snug">
             MONTONES DE DESCUENTOS Y PRENDAS INCREIBLES {""}
             <strong className="text-orange-500">PARA TI</strong>
           </h1>
-          <p className="font-light text-xl text-white mb-6">
+          <p className="font-light text-xl px-8 md:px-0 text-white mb-6">
             No todos los días te sientes igual, por lo que tu ropa tampoco debe
             ser la misma, ponte lo que haga que te sientas bien cada día.
           </p>
@@ -139,9 +139,9 @@ export default function Home() {
       </section>
 
       {/* ---------------------- ÚNETE A NOSOTROS... - SECTION ------------------------- */}
-      <section className="h-auto mb-10 p-10">
-        <div className="flex ">
-          <div className="flex flex-col gap-5 w-[50%] mr-20">
+      <section className="h-auto mb-10 px-5 md:px-0 md:p-10">
+        <div className="flex md:flex-row flex-col">
+          <div className="flex flex-col gap-5 md:w-[50%] md:mr-20">
             <h1 className="text-black text-4xl font-semibold leading-snug">
               ¡ÚNETE A NOSOTROS PARA RECIBIR ACTUALIZACIONES INSTANTÁNEAS{" "}
               <strong className="text-orange-500">
@@ -157,7 +157,7 @@ export default function Home() {
               <input
                 type="email"
                 placeholder="correo electronico"
-                className="rounded-l-3xl px-5 outline-none"
+                className="rounded-l-3xl px-2 md:px-5 outline-none"
               />
               <Link
                 href="/"
@@ -168,7 +168,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="w-[50%]">
+          <div className="w-[50%] hidden md:flex">
             <img src="/images/3.jpg" alt="men-suit" className="rounded-2xl" />
           </div>
         </div>

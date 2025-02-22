@@ -51,7 +51,7 @@ export const Sidebar = () => {
       {/* side menu */}
       <nav
         className={clsx(
-          "fixed p-5 right-0 top-0 w-[400px] h-screen bg-white z-20 shadow-2xl transform transition-all duration-300",
+          "fixed p-5 right-0 top-0 w-[300px] h-screen bg-white z-20 shadow-2xl transform transition-all duration-300",
           {
             "translate-x-full": !isSideMenuOpen,
           }
@@ -59,7 +59,7 @@ export const Sidebar = () => {
       >
         <IoCloseOutline
           size={50}
-          className="absolute z-10 right-1 cursor-pointer"
+          className="absolute z-10 right-1 top-2 cursor-pointer"
           onClick={() => closeMenu()}
         />
 
@@ -148,6 +148,9 @@ export const Sidebar = () => {
             </Link>
           </>
         )}
+        <div className="flex justify-center w-full text-black text-sm md:text-3xl font-extrabold">
+          RAINBOW <strong className="text-orange-500">CLOTHES</strong>
+        </div>
       </nav>
     </div>
   );

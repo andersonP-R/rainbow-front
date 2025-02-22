@@ -2,11 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import {
-  IoCartOutline,
-  IoPersonOutline,
-  IoSearchOutline,
-} from "react-icons/io5";
+import { IoCartOutline, IoPersonOutline } from "react-icons/io5";
 import { MenuButton } from "./MenuButton";
 import { useCartStore } from "@/store/cart/cart-store";
 
@@ -19,7 +15,7 @@ export const TopMenu = () => {
     setLoaded(true);
   }, []);
   return (
-    <nav className="flex px-5 justify-between items-center w-full h-16 ">
+    <nav className="flex pl-3 md:px-5 justify-between items-center w-full h-16 ">
       <div>
         <Link
           href={"/"}
