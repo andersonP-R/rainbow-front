@@ -148,7 +148,7 @@ export const Sidebar = () => {
             </Link>
           </>
         )}
-        <div className="flex justify-center w-full text-black text-sm md:text-3xl font-extrabold">
+        <div className="flex justify-center w-full text-black text-sm md:text-xl font-extrabold">
           RAINBOW <strong className="text-orange-500">CLOTHES</strong>
         </div>
       </nav>
