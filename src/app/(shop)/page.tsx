@@ -88,7 +88,7 @@ export default function Home() {
       {/* ------------- NO DEJES ESCAPAR NUESTROS DESCUENTOS EN... SECTION  --------------- */}
       <section className="h-auto mb-10 px-5 md:p-10">
         <div className="flex flex-col md:flex-row-reverse">
-          <div className="flex flex-col mb-8 md:mb-0 gap-5 md:w-[50%] md:text-right">
+          <div className="flex flex-col mb-8 md:mb-0 gap-5 md:w-[50%] text-right">
             <h1 className="text-black text-xl md:text-4xl font-semibold leading-snug">
               NO DEJES ESCAPAR NUESTROS DESCUENTOS EN {""}
               <strong className="text-orange-500">ACCESORIOS FEMENINOS</strong>
