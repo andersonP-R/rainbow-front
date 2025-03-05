@@ -9,7 +9,7 @@ export default function CartPage() {
   // redirect('/empty');
 
   return (
-    <div className="flex justify-center items-center mb-72 px-10 sm:px-0">
+    <div className="flex justify-center items-center mb-72 md:px-10 px-4">
       <div className="flex flex-col w-[1000px]">
         <div className="flex gap-2 items-center">
           <Title title="Carrito" />
@@ -18,7 +18,7 @@ export default function CartPage() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-10">
           {/* Carrito */}
-          <div className="flex flex-col mt-5">
+          <div className="flex flex-col md:mt-5">
             <span className="text-xl">Agregar más items</span>
             <Link href="/products" className="underline mb-5">
               Continúa comprando
